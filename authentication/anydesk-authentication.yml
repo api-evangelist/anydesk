@@ -1,0 +1,32 @@
+generated: '2026-07-17'
+method: searched
+source: https://support.anydesk.com/docs/rest-api
+docs: https://support.anydesk.com/docs/rest-api
+description: >-
+  The AnyDesk my.anydesk I REST API authenticates with a License ID and an API
+  Password supplied in an authentication request header. Credentials are issued
+  by AnyDesk support against a customer number (On-Premises licenses generate
+  them via the console REST-API command). No OpenAPI is published, so this
+  profile is captured from the documentation rather than derived from a spec.
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+  oauth2_flows: []
+schemes:
+  - name: LicenseCredentials
+    type: apiKey
+    in: header
+    description: >-
+      Requests are authenticated with the account License ID plus an API
+      Password, passed in the request authentication header documented in the
+      Files tab of the my.anydesk.com customer portal. Credentials are requested
+      from AnyDesk support with a customer number.
+    sources:
+    - https://support.anydesk.com/docs/rest-api
+notes: >-
+  The exact header name and endpoint domain are published inside the customer
+  portal (my.anydesk.com Files tab) and the On-Premises Installation Guide, not
+  on the public web. This artifact records the documented auth model without
+  reproducing gated credential material.
