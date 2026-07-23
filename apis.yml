@@ -1,8 +1,17 @@
 aid: anydesk
 name: AnyDesk
-description: 'AnyDesk is a company surfaced as a portfolio company of eqt-ventures, insight-partners and
-  added to the API Evangelist network as a stub for enrichment. Sector: remote-work. This profile is a
-  lead awaiting the enrichment pipeline.'
+description: >-
+  AnyDesk is a German remote desktop and remote access software company whose
+  clients provide cross-platform remote control, unattended access, remote
+  support and file transfer for Windows, macOS, Linux, Android and iOS. For
+  administrators, the my.anydesk management console centralizes license,
+  client, address book and session management, and exposes a JSON-over-HTTPS
+  REST API (my.anydesk I REST API, v1.1.1) that automates retrieval and
+  management of account data — license and account details, registered
+  clients, session history and comments, aliases and address books — so teams
+  can integrate AnyDesk with billing, ticketing and session-logging systems.
+  AnyDesk ships an official open-source Python library for the API and supports
+  SSO/SAML for console access.
 url: https://raw.githubusercontent.com/api-evangelist/anydesk/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,13 +20,54 @@ x-backed-by:
 - insight-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
+image: https://anydesk.com/favicon.ico
 tags:
 - Company
 - Remote Work
-apis: []
+- Remote Desktop
+- Remote Access
+- Remote Support
+- IT Management
+- REST API
+- Security
+apis:
+- name: AnyDesk REST API
+  description: >-
+    The my.anydesk I REST API automates retrieval and management of AnyDesk
+    account data from the my.anydesk management console: license and account
+    details, registered clients and their aliases/online status, session
+    history and detailed session data, session comments, closing active
+    sessions, and listing address books. Authenticated with a License ID and
+    API Password in a request header.
+  humanURL: https://support.anydesk.com/docs/rest-api
+  baseURL: https://my.anydesk.com
+  version: 1.1.1
+  tags:
+  - Remote Access
+  - Session Management
+  - License Management
+  properties:
+  - type: Documentation
+    url: https://support.anydesk.com/docs/rest-api
+  - type: APIReference
+    url: https://support.anydesk.com/docs/rest-api
+  - type: Authentication
+    url: authentication/anydesk-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -26,3 +76,46 @@ maintainers:
 common:
 - type: Website
   url: https://anydesk.com/
+- type: DeveloperPortal
+  url: https://my.anydesk.com/
+- type: Documentation
+  url: https://support.anydesk.com/
+- type: APIReference
+  url: https://support.anydesk.com/docs/rest-api
+- type: GettingStarted
+  url: https://support.anydesk.com/docs/getting-started
+- type: Support
+  url: https://support.anydesk.com/docs/contact-us
+- type: GitHubOrganization
+  url: https://github.com/anydesk
+- type: SignUp
+  url: https://my.anydesk.com/login
+- type: Pricing
+  url: https://anydesk.com/en/pricing
+- type: PrivacyPolicy
+  url: https://anydesk.com/en/privacy
+- type: Compliance
+  url: https://support.anydesk.com/docs/gdpr-compliance
+- type: LLMsTxt
+  url: llms/anydesk-llms.txt
+- type: Packages
+  url: packages/anydesk-packages.yml
+- type: SDKs
+  url: packages/anydesk-packages.yml
+- type: Authentication
+  url: authentication/anydesk-authentication.yml
+- type: Conventions
+  url: conventions/anydesk-conventions.yml
+- type: WellKnown
+  url: well-known/anydesk-well-known.yml
+- type: Conformance
+  url: conformance/anydesk-conformance.yml
+- type: DomainSecurity
+  url: security/anydesk-domain-security.yml
+- type: MCPServer
+  url: mcp/anydesk-mcp.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

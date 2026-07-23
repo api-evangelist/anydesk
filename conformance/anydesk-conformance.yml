@@ -1,0 +1,41 @@
+generated: '2026-07-17'
+method: searched
+source: >-
+  https://support.anydesk.com/docs/rest-api,
+  https://support.anydesk.com/docs/security.md,
+  https://support.anydesk.com/docs/gdpr-compliance.md
+description: >-
+  Cross-cutting standards the AnyDesk my.anydesk I REST API and platform conform
+  to, from the published documentation. AnyDesk publishes no OpenAPI, so
+  API-shape conformance is asserted from the documented request/response model.
+standards:
+  - id: rest-json
+    conforms: true
+    evidence: >-
+      The my.anydesk I REST API is a JSON-over-HTTPS interface for account,
+      license, client, session and address-book data.
+  - id: apikey-header-auth
+    conforms: true
+    evidence: >-
+      Authentication is a License ID + API Password supplied in a request header
+      (support.anydesk.com/docs/rest-api).
+  - id: oauth2
+    conforms: false
+    evidence: The REST API uses License ID + API Password header auth, not OAuth2.
+  - id: oidc
+    conforms: false
+    evidence: No /.well-known/openid-configuration served on any AnyDesk host.
+  - id: saml-sso
+    conforms: true
+    evidence: >-
+      my.anydesk supports Single Sign-On / SAML for console access
+      (support.anydesk.com/docs/single-sign-on-sso).
+  - id: gdpr
+    conforms: true
+    evidence: >-
+      AnyDesk publishes a GDPR compliance statement describing technical and
+      organizational measures for EU data protection
+      (support.anydesk.com/docs/gdpr-compliance).
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No application/problem+json error contract is documented.

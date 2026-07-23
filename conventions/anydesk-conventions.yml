@@ -1,0 +1,42 @@
+generated: '2026-07-17'
+method: searched
+source: https://support.anydesk.com/docs/rest-api
+description: >-
+  Cross-cutting request/response semantics for the AnyDesk my.anydesk I REST
+  API, captured from the documentation. No OpenAPI is published, so the finer
+  details (pagination fields, error envelope) are documented in the customer
+  portal Files tab rather than the public web.
+authentication:
+  style: apikey-header
+  detail: >-
+    License ID + API Password in a request authentication header; credentials
+    issued by AnyDesk support per customer number.
+  ref: authentication/anydesk-authentication.yml
+transport:
+  protocol: https
+  format: json
+  base_domain: >-
+    Documented in the my.anydesk.com customer portal Files tab (not public).
+idempotency:
+  supported: false
+  detail: No idempotency-key header or contract is documented for the REST API.
+pagination:
+  style: unknown
+  detail: >-
+    Session History is retrieved for a selected time range; pagination fields
+    are documented in the portal Files-tab reference.
+versioning:
+  scheme: api-version
+  current: 1.1.1
+  detail: >-
+    The REST API advertises a feature set "as of version 1.1.1"; there is no
+    documented URI/date version negotiation scheme.
+rate_limiting:
+  documented: false
+error_handling:
+  documented: false
+  detail: No public error-envelope or problem-details contract is published.
+cross_links:
+  authentication: authentication/anydesk-authentication.yml
+  conformance: conformance/anydesk-conformance.yml
+  packages: packages/anydesk-packages.yml

@@ -1,0 +1,24 @@
+generated: '2026-07-17'
+method: searched
+source: https://support.anydesk.com/docs/rest-api + https://github.com/anydesk/rest-api
+description: >-
+  First-party AnyDesk client libraries. AnyDesk publishes one official,
+  open-source package: a Python library for the my.anydesk I REST API,
+  distributed from the anydesk GitHub organization (MIT licensed). It is not
+  published to PyPI; the documented install path is to download/clone the repo
+  and configure credentials in doc/examples/auth.cfg. No first-party libraries
+  were found on npm, Maven Central, NuGet, pkg.go.dev, RubyGems, Packagist, or
+  crates.io.
+packages:
+  - language: python
+    registry: github
+    name: anydesk/rest-api
+    url: https://github.com/anydesk/rest-api
+    source: https://github.com/anydesk/rest-api
+    install: git clone https://github.com/anydesk/rest-api
+    license: MIT
+    description: >-
+      Official Python library for talking to the AnyDesk REST API, with example
+      scripts for exporting session data, listing address books and clients, and
+      printing system stats.
+    official: true

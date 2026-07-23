@@ -1,0 +1,50 @@
+generated: '2026-07-17'
+method: searched
+description: >-
+  Results of probing the /.well-known/ discovery surface for the AnyDesk hosts
+  in apis.yml (anydesk.com, my.anydesk.com, support.anydesk.com). Status is the
+  HTTP code observed at fetch time. The primary marketing and console hosts sit
+  behind Cloudflare and return 403 to automated clients for every path;
+  support.anydesk.com returns 404 for the well-known paths but does publish a
+  real llms.txt (captured separately in llms/). No well-known discovery document
+  was found.
+hosts:
+  - host: https://anydesk.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+      - path: /.well-known/openid-configuration
+        status: 403
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+      - path: /.well-known/api-catalog
+        status: 403
+      - path: /.well-known/ai-plugin.json
+        status: 403
+  - host: https://my.anydesk.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+      - path: /.well-known/openid-configuration
+        status: 403
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+      - path: /.well-known/api-catalog
+        status: 403
+      - path: /.well-known/ai-plugin.json
+        status: 403
+  - host: https://support.anydesk.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /llms.txt
+        status: 200
+        note: real llms.txt, saved to llms/anydesk-llms.txt
