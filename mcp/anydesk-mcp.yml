@@ -2,36 +2,40 @@ generated: '2026-07-17'
 method: derived
 status: candidate
 source: https://support.anydesk.com/docs/rest-api
-description: >-
-  Candidate MCP server tool list derived from the documented my.anydesk I REST
-  API command set. AnyDesk publishes no official hosted or remote MCP server;
-  these tools are a proposed one-tool-per-documented-operation mapping to make
-  the REST API agent-consumable. Not an AnyDesk product claim.
+description: Candidate MCP server tool list derived from the documented my.anydesk I REST API command
+  set. AnyDesk publishes no official hosted or remote MCP server; these tools are a proposed one-tool-per-documented-operation
+  mapping to make the REST API agent-consumable. Not an AnyDesk product claim.
 server:
   name: anydesk
   transport: http
 tools:
-  - name: get_license
-    description: View license details.
-  - name: get_account
-    description: View account details (license, number of AnyDesk clients, etc.).
-  - name: list_clients
-    description: List all AnyDesk clients registered to the account.
-  - name: get_client
-    description: Get details for a specific client (Alias, online status, etc.).
-  - name: remove_client
-    description: Remove a client from the license.
-  - name: list_sessions
-    description: Retrieve session history for a selected time range.
-  - name: get_session
-    description: View detailed session data.
-  - name: update_session_comment
-    description: Add or update session comments.
-  - name: close_session
-    description: Close an active session.
-  - name: set_client_alias
-    description: Change a client Alias.
-  - name: remove_client_alias
-    description: Remove a client Alias.
-  - name: list_address_books
-    description: List the names and IDs of all address books associated with the license.
+- name: get_license
+  description: View license details.
+- name: get_account
+  description: View account details (license, number of AnyDesk clients, etc.).
+- name: list_clients
+  description: List all AnyDesk clients registered to the account.
+- name: get_client
+  description: Get details for a specific client (Alias, online status, etc.).
+- name: remove_client
+  description: Remove a client from the license.
+- name: list_sessions
+  description: Retrieve session history for a selected time range.
+- name: get_session
+  description: View detailed session data.
+- name: update_session_comment
+  description: Add or update session comments.
+- name: close_session
+  description: Close an active session.
+- name: set_client_alias
+  description: Change a client Alias.
+- name: remove_client_alias
+  description: Remove a client Alias.
+- name: list_address_books
+  description: List the names and IDs of all address books associated with the license.
+deployment:
+  mode: none
+  verified: derived
+  tools: 12
+  checked: '2026-08-12'
+  source: catalog MCP census
