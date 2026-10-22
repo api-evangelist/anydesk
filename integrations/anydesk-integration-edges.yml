@@ -1,0 +1,25 @@
+generated: '2026-10-19'
+method: searched
+checked:
+- freshworks/integrations/freshworks-integration-edges.yml
+source:
+- freshworks/integrations/freshworks-integration-edges.yml
+edges:
+- partner_name: Freshworks (own)
+  partner: freshworks
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.freshworks.com/apps/anydesk_remote_access
+  mirror_of: freshworks/integrations/freshworks-integration-edges.yml
+  apps:
+  - AnyDesk
+  listing_count: 1
+  detected: '2026-10-19'
+  detected_by: mirror-platform-listings.py
+  publisher_verified:
+  - Verified by Freshworks
